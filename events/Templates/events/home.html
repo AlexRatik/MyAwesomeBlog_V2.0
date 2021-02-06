@@ -1,13 +1,15 @@
 <!doctype html>
 <html lang="ru">
+{% load static %}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Пример на bootstrap 4: Простой одностраничный шаблон для фотогалереи, портфолио и многого другого. Версия v4.5">
 
-    <title>Альбом | Album example for Bootstrap. Версия v4.5</title>
+    <title>My Awesome Blog</title>
 
     <!-- Bootstrap core CSS -->
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <!-- Favicons -->
@@ -68,14 +70,12 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark font-italic" style="background-color: #522b8c">
         <a class="navbar-brand" href="#">My Awesome Blog</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
+
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="#">About Me</a>
-          <a class="nav-item nav-link" href="#">Facebook</a>
-          <a class="nav-item nav-link" href="#">Blog</a>
+          <a class="nav-item nav-link" href="{% static 'static_text.txt' %}">About Me</a>
+          <a class="nav-item nav-link" href="https://yandex.by/search/?text=translate&lr=10274&clid=2186621" target="_blank" rel="noopener noreferrer">Translater</a>
+          <a class="nav-item nav-link" href="{% url 'showblog' %}">Blog</a>
         </div>
       </div>
       </nav>
@@ -89,6 +89,9 @@
       <p>
         <a href="mailto:grebany.hacker@gmail.com" class="btn  my-2 text-light" style="background-color: #7952b3">Mail me</a>
       </p>
+
+      <img  src="{% static 'static_img_1.jpg' %}" width="100" class="img-fluid" >
+
     </div>
   </section>
 
